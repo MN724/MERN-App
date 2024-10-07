@@ -1,0 +1,88 @@
+### CREATE five documents.
+POST http://localhost:3000/albums HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Blonde",
+    "artist": "Frank Ocean",
+    "date": "08/20/2016",
+    "genre": "Alternative R&B"
+}
+
+
+### CREATE 2
+POST http://localhost:3000/albums HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Axis: Bold as Love",
+    "artist": "Jimi Hendrix",
+    "date": "12/01/1967",
+    "genre": "Psychedelic Rock"
+}
+
+### CREATE 3
+POST http://localhost:3000/albums HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Ctrl",
+    "artist": "SZA",
+    "date": "06/09/2017",
+    "genre": "Alternative R&B"
+}
+
+### CREATE 4
+POST http://localhost:3000/albums HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Maggot Brain",
+    "artist": "Funkadelic",
+    "date": "07/12/1971",
+    "genre": "Funk"
+}
+
+### CREATE 5
+POST http://localhost:3000/albums HTTP/1.1
+content-type: application/json
+
+{
+    "title": "The Miseducation of Lauryn Hill",
+    "artist": "Lauryn Hill",
+    "date": "08/25/1998",
+    "genre": "Hip-Hop"
+}
+
+
+### RETRIEVE all documents.
+GET http://localhost:3000/albums HTTP/1.1
+
+
+
+### RETRIEVE a document by its ID.
+### Replace the following ID with one that exists in the collection.
+GET http://localhost:3000/albums/656d6db5301db410cac1665e HTTP/1.1
+
+
+### UPDATE one document's year, by ID.
+### Replace the ID in the following request with one that exists
+### and update the year:
+PUT http://localhost:3000/albums/656d67aa6a3c12dff843f54c HTTP/1.1
+content-type: application/json
+
+{
+    "title": "SOS",
+    "artist": "SZA",
+    "date": "12/09/2022",
+    "genre": "Alternative R&B"
+}
+
+### DELETE by ID (responds with nothing if successful):
+DELETE http://localhost:3000/albums/656d67b36a3c12dff843f554 HTTP/1.1
+
+
+
+### RETRIEVE all documents (responds with 4 or the original 5):
+GET http://localhost:3000/albums HTTP/1.1
+
